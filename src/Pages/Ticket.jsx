@@ -1,4 +1,4 @@
-import {useState} from "react";
+import { useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
 import { loadTickets, saveTickets } from "../store/Storage";
 
@@ -60,11 +60,11 @@ function TicketForm({ onSave, initial = {}, onCancel }) {
 }
 
 export default function Ticket() {
-    const [tickets, setTickets] = React.useState(loadTickets());
-    const [editing, setEditing] = React.useState(null);
-    const [toast, setToast] = React.useState("");
+    const [tickets, setTickets] = useState(loadTickets());
+    const [editing, setEditing] = useState(null);
+    const [toast, setToast] = useState("");
 
-    React.useEffect(() => {
+    useEffect(() => {
         saveTickets(tickets);
     }, [tickets]);
 
@@ -99,7 +99,7 @@ export default function Ticket() {
         <>
             <NavBar />
             <main className="site-container-inner">
-                <header>
+                <header className="headT">
                    <h1>Tickets</h1>
                 </header>
 
@@ -150,6 +150,8 @@ export default function Ticket() {
 
                 {toast && <div className="toast">{toast}</div>}
             </main>
+            <div class="decor-circle decor-circle--large" aria-hidden="true"></div>
+
         </>
     );
 }

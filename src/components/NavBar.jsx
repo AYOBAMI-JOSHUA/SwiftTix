@@ -13,7 +13,7 @@ export default function NavBar() {
 
     return (
         <header className="topbar" role="banner">
-            <nav className="site-container-inner" role="navigation" aria-label="Main Navigation">
+            <nav className="site-contain" role="navigation" aria-label="Main Navigation">
                 
                 <div className="nav-left">
                    <span className="brand">SwiftTix</span>

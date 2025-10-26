@@ -11,8 +11,8 @@ export default function Landing() {
             <p className="lead">Manage tickets fast — create, update, and track issues with ease.</p>
 
             <div className="cta-row" role="group" aria-label="Call to action">
-              <Link to="/auth/login" className="btn-primary">Login</Link>
-              <Link to="/auth/signup" className="btn-outline">Get Started</Link>
+              <Link to="/auth/login" className="btn-secondary">Login</Link>
+              <Link to="/auth/signup" className="btn-outlin">Get Started</Link>
             </div>
           </section>
 

@@ -1,16 +1,56 @@
-# React + Vite
+# SwiftTix — React (Stage 2)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+SwiftTix is a responsive ticket management web application built as part of the **Stage 2 Frontend Task**. It includes a landing page, authentication, dashboard stats, and full ticket CRUD management — all implemented with **React, React Router, and localStorage** (no backend required).
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+| Feature | Status |
+|---------|---------|
+| Landing page with SVG hero + decorative circles | ✅ |
+| Signup & Login (with validation, localStorage session) | ✅ |
+| Protected routes using `ticketapp_session` | ✅ |
+| Dashboard with ticket stats | ✅ |
+| Ticket CRUD (Create, Read, Update, Delete) | ✅ |
+| Toast + inline validation feedback | ✅ |
+| Responsive Navigation (desktop + mobile hamburger) | ✅ |
+| Accessible semantic HTML | ✅ |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🧰 Tech Stack
+- **React**
+- **React Router v6**
+- **LocalStorage for auth + persistence**
+- **Plain CSS** (no CSS frameworks)
+- **Vite / CRA compatible**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📌 Routes
+
+| Route | Description |
+|---------|------------|
+| `/` | Landing page |
+| `/auth/login` | Login |
+| `/auth/signup` | Signup |
+| `/dashboard` | Dashboard (protected) |
+| `/tickets` | Ticket Management (protected) |
+
+> Users without a session are redirected to `/auth/login`.
+
+---
+
+## 🔐 Authentication
+
+- Session is stored in **localStorage**
+- **Required key (as per task)**: `ticketapp_session`
+- Users are stored in: `ticketapp_users`
+- Tickets are stored in: `ticketapp_tickets`
+
+### Test Login
+
+Email: admin@local.com
+
+Password: password123

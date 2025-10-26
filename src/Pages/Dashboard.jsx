@@ -10,10 +10,10 @@ export default function Dashboard() {
   const closed = tickets.filter(t => t.status === "closed").length;
 
     return (
-        <>
+        <div>
             <NavBar />
 
-            <main className="site-container-inner dashboard" role="main">
+            <main className="dashboard" role="main">
                 <header className="dashboard-header">
                     <h1>Dashboard</h1>
                     <p className="muted">Overview of your ticket activities</p>
@@ -45,6 +45,8 @@ export default function Dashboard() {
                     <Link to="/tickets" className="btn-primary">Manage Tickets</Link>
                 </section>
             </main>
-        </>
+            <div class="decor-circle decor-circle--large" aria-hidden="true"></div>
+
+        </div>
     );
 }

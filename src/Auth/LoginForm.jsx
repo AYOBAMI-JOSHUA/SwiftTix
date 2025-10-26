@@ -63,7 +63,6 @@ export default function LoginForm() {
             </form>
 
             <Toast text={toast} />
-            <p className="muted">Test credentials: swift@gamil.com / swift123</p>
         </section>
     );
 }
