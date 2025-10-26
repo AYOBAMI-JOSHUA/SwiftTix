@@ -1,10 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-import LoginForm from "../auth/LoginForm";
-import SignupForm from "../auth/SignupForm";
-
-
-
-
+import LoginForm from "../Auth/LoginForm";
+import SignupForm from "../Auth/SignupForm";
 
 export default function Auth() {
   return (
