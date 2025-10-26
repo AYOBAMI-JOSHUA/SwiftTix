@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { setSession } from "../store/Storage";
 import { useState } from "react";
 
-export default function SignupForm() {
+export default function SignUpForm() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [err, setErr] = useState("");
