@@ -1,8 +1,8 @@
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { setSession } from "../store/Storage";
-import { useState } from "react";
 
-export default function SignUpForm() {
+export default function SignupForm() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [err, setErr] = useState("");
